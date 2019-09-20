@@ -16,11 +16,10 @@ export default {
   components: {
     'add-meal-form': AddMealForm,
     'meals-dashboard': MealsDashboard 
-
   }
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

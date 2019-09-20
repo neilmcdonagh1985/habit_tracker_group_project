@@ -1,17 +1,33 @@
 <template>
   <div>
-    <h1>hello from add meal form</h1>
+    <form class="meal-form">
+      <label for="date">Date:</label>
+      <input type="date" id="date">
+      
+      <label for="meal">Select Meal:</label>
+      <select name="meal" id="meal">
+        <option disabled selected>Meal?</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="snack">Snack</option>
+      </select>
+
+      <label for="calories">Kcl</label>
+      <input type="text" id="calories">
+
+      <input type="submit">
+    </form>
   </div>
 </template>
 
 <script>
 export default {
-  name: ''
+  name: 'add-meal-form'
   
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>
