@@ -6,10 +6,10 @@
 
 <script>
 export default {
+  name: 'meals-dashboard'
 
 }
 </script>
 
 <style>
-
 </style>

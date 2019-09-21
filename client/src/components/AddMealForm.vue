@@ -13,7 +13,7 @@
         <option value="snack">Snack</option>
       </select>
 
-      <label for="calories">Kcl</label>
+      <label for="calories">Kcal</label>
       <input type="text" id="calories">
 
       <input type="submit">

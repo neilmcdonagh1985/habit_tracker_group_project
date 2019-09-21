@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <nav>
-      <add-meal-form />
-    </nav>
+    <add-meal-form />
     <meals-dashboard />
   </div>
 </template>
