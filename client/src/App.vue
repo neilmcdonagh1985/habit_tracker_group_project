@@ -6,8 +6,9 @@
 </template>
 
 <script>
+import MealsService from './services/MealsService.js';
 import AddMealForm from './components/AddMealForm.vue';
-import MealsDashboard from './components/MealsDashboard.vue'
+import MealsDashboard from './components/MealsDashboard.vue';
 
 export default {
   name: 'app',

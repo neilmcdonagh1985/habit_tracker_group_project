@@ -1,11 +1,11 @@
 <template>
   <div>
-    <form class="meal-form">
+    <form class="meal-form" v-on:submit.prevent="handleSubmit">
       <label for="date">Date:</label>
-      <input type="date" id="date">
+      <input type="date" id="date" v-model="date">
       
       <label for="meal">Select Meal:</label>
-      <select name="meal" id="meal">
+      <select name="meal" id="meal" v-model="mealType">
         <option disabled selected>Meal?</option>
         <option value="breakfast">Breakfast</option>
         <option value="lunch">Lunch</option>
@@ -14,7 +14,7 @@
       </select>
 
       <label for="calories">Kcal</label>
-      <input type="text" id="calories">
+      <input type="number" id="calories" v-model.number="calories">
 
       <input type="submit">
     </form>
@@ -22,8 +22,32 @@
 </template>
 
 <script>
+import MealsService from '../services/MealsService.js'
+
 export default {
-  name: 'add-meal-form'
+  name: 'add-meal-form',
+  data() {
+    return {
+    date: null,
+    mealType: null,
+    calories: null
+    }
+    
+      
+    },
+    methods: {
+      handleSubmit() {
+        const newMeal = {
+          date: this.date,
+          mealType: this.mealType,
+          calories: this.calories
+        };
+        MealsService.addMeal(newMeal)
+      }
+    
+
+  },
+
   
 }
 </script>
