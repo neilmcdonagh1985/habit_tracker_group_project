@@ -11,5 +11,9 @@ export default {
         .then(res => res.json())
             
             
+    },
+    getMeals() {
+        return fetch(baseURL)
+        .then(res => res.json())
     }
 }
