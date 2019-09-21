@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <add-meal-form />
-    <meals-dashboard />
+    <meals-dashboard :meals="meals"/>
   </div>
 </template>
 
