@@ -1,8 +1,8 @@
 <template>
   <div>
-      <h1>Today's Total Calories: {{todaysTotalCalories}}</h1>
-      <ul v-for="meal in todaysMeals">
-        <li>Your {{meal.mealType}} was {{meal.calories}} kcal</li>
+      <h1>Today's Total Calories: {{ todaysTotalCalories }}</h1>
+      <ul v-for="meal in todaysMeals" :key="meal._id">
+        <li>Your {{ meal.type }} was {{ meal.calories }} kcal</li>
       </ul>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
   props: ['meals'],
   data() {
     return {
-      date: "2019-09-11"
+      date: "2019-09-16"
     }
   },
   computed: {

@@ -10,6 +10,8 @@ import MealsService from './services/MealsService.js';
 import AddMealForm from './components/AddMealForm.vue';
 import MealsDashboard from './components/MealsDashboard.vue';
 
+import { eventBus } from '@/main.js'
+
 export default {
   data() {
     return {
@@ -30,6 +32,10 @@ export default {
   },
   mounted() {
     this.showAllMeals()
+
+    eventBus.$on('new-meal-added', allMeals => {
+      this.meals = allMeals
+  })
   }
 }
 </script>

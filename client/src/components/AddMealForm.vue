@@ -5,7 +5,7 @@
       <input type="date" id="date" v-model="date">
       
       <label for="meal">Select Meal:</label>
-      <select name="meal" id="meal" v-model="mealType">
+      <select name="meal" id="meal" v-model="type">
         <option disabled selected>Meal?</option>
         <option value="breakfast">Breakfast</option>
         <option value="lunch">Lunch</option>
@@ -23,13 +23,14 @@
 
 <script>
 import MealsService from '../services/MealsService.js'
+import { eventBus } from '@/main.js'
 
 export default {
   name: 'add-meal-form',
   data() {
     return {
     date: null,
-    mealType: null,
+    type: null,
     calories: null
     }
     
@@ -39,10 +40,13 @@ export default {
       handleSubmit() {
         const newMeal = {
           date: this.date,
-          mealType: this.mealType,
+          type: this.type,
           calories: this.calories
         };
         MealsService.addMeal(newMeal)
+        .then(res => {
+          eventBus.$emit('new-meal-added', res)
+        })
       }
     
 
