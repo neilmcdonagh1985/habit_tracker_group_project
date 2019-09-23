@@ -1,6 +1,6 @@
 <template>
   <div>
-    <daily-chart :todaysMeals="todaysMeals" />
+    <daily-chart :dailyCalories="dailyCalories" :dailyIntake="dailyIntake" />
     <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal" />
   </div>
 </template>
@@ -18,12 +18,18 @@ export default {
   },
   data() {
     return {
+      dailyIntake: 3000,
       date: '2019-09-16'
     };
   },
   computed: {
     todaysMeals: function() {
       return this.meals.filter(meal => meal.date === this.date);
+    },
+    dailyCalories: function() {
+      return this.todaysMeals
+        .map(meal => meal.calories)
+        .reduce((totalCalories, calories) => totalCalories + calories, 0);
     }
   }
 };

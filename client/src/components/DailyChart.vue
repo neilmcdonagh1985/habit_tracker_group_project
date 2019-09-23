@@ -9,14 +9,14 @@ import VueApexCharts from 'vue-apexcharts';
 
 export default {
   name: 'daily-chart',
-  props: ['todaysMeals'],
+  props: ['dailyCalories', 'dailyIntake'],
   components: {
     apexchart: VueApexCharts
   },
   data() {
     return {
-      dailyIntake: 3000, // TODO add this to the dataLabel.
       chartOptions: {
+        // TODO format the chart.
         labels: ['Kcal'],
         chart: {
           height: 350,
@@ -30,8 +30,8 @@ export default {
                 show: true
               },
               value: {
-                formatter: function(val) {
-                  return val;
+                formatter: () => {
+                  return `${this.dailyCalories}/${this.dailyIntake}`;
                 },
                 show: true
               }
@@ -44,10 +44,9 @@ export default {
 
   computed: {
     formattedData() {
-      let calories = this.todaysMeals
-        .map(meal => meal.calories)
-        .reduce((totalCalories, calories) => totalCalories + calories, 0);
-      let percentageCalories = Math.floor((calories / this.dailyIntake) * 100);
+      let percentageCalories = Math.floor(
+        (this.dailyCalories / this.dailyIntake) * 100
+      );
       return [percentageCalories];
     }
   }
