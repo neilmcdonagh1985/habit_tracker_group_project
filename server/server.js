@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 MongoClient.connect('mongodb://localhost:27017')
   .then((client) => {
-    const db = client.db('person');
+    const db = client.db('habitTracker');
     const mealsCollection = db.collection('meals');
     const mealsRouter = createRouter(mealsCollection);
     app.use('/api/meals', mealsRouter);
