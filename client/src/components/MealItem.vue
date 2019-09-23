@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <tr>
     <td>{{ meal.date }}</td>
     <td>{{ meal.type }}</td>
     <td>{{ meal.calories }}</td>
     <td>
-      <button @click="handleDelete()">DELETE</button>
+      <button class="btn btn-danger" @click="handleDelete()">DELETE</button>
     </td>
-  </div>
+  </tr>
 </template>
 
 <script>

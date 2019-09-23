@@ -1,15 +1,17 @@
 <template>
   <div>
-    <table>
-      <tr>
-        <th>Date</th>
-        <th>Meal</th>
-        <th>Calories</th>
-        <th></th>
-      </tr>
-      <tr v-for="meal in meals" :key="meal._id">
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Meal</th>
+          <th scope="col">Calories</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody v-for="meal in meals" :key="meal._id">
         <meal-item :meal="meal" />
-      </tr>
+      </tbody>
     </table>
   </div>
 </template>

@@ -1,8 +1,10 @@
 <template>
-  <li>
-    <h3>{{ formatMealText(meal.type) }}</h3>
-    <p>{{ meal.calories }}</p>
-  </li>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <span class="float-left value">{{ formatMealText(meal.type) }}</span>
+      <span class="float-right value">{{ meal.calories }}</span>
+    </li>
+  </ul>
 </template>
 
 <script>

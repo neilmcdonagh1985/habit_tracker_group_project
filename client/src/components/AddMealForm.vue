@@ -1,22 +1,25 @@
 <template>
   <div>
     <form class="meal-form" v-on:submit.prevent="handleSubmit">
-      <label for="date">Date:</label>
-      <input type="date" id="date" v-model="date" />
-
-      <label for="meal">Select Meal:</label>
-      <select name="meal" id="meal" v-model="type">
-        <option disabled selected>Meal?</option>
-        <option value="breakfast">Breakfast</option>
-        <option value="lunch">Lunch</option>
-        <option value="dinner">Dinner</option>
-        <option value="snack">Snack</option>
-      </select>
-
-      <label for="calories">Kcal</label>
-      <input type="number" id="calories" v-model.number="calories" />
-
-      <input type="submit" />
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" v-model="date" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="meal">Select Meal:</label>
+        <select name="meal" id="meal" v-model="type" class="form-control">
+          <option disabled selected>Meal?</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+          <option value="snack">Snack</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="calories">Kcal</label>
+        <input type="number" id="calories" v-model.number="calories" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary">Add</button>
     </form>
   </div>
 </template>
