@@ -3,7 +3,7 @@
     <form class="meal-form" v-on:submit.prevent="handleSubmit">
       <label for="date">Date:</label>
       <input type="date" id="date" v-model="date">
-      
+
       <label for="meal">Select Meal:</label>
       <select name="meal" id="meal" v-model="type">
         <option disabled selected>Meal?</option>
@@ -33,8 +33,8 @@ export default {
     type: null,
     calories: null
     }
-    
-      
+
+
     },
     methods: {
       handleSubmit() {
@@ -48,11 +48,11 @@ export default {
           eventBus.$emit('new-meal-added', res)
         })
       }
-    
+
 
   },
 
-  
+
 }
 </script>
 
