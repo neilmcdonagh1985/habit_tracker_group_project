@@ -1,6 +1,6 @@
 <template>
   <li>
-    <h3>{{ meal.type }}</h3>
+    <h3>{{ formatMealText(meal.type) }}</h3>
     <p>{{ meal.calories }}</p>
   </li>
 </template>
@@ -10,7 +10,9 @@ export default {
   name: 'daily-meals',
   props: ['meal'],
   methods: {
-    formatMealText() {}
+    formatMealText(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
   }
 };
 </script>

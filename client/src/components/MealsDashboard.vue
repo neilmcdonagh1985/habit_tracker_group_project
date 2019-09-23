@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div>
+      <label for="date">Date:</label>
+      <input type="date" id="date" v-model="date" />
+    </div>
     <daily-chart :dailyCalories="dailyCalories" :dailyIntake="dailyIntake" />
     <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal" />
   </div>
@@ -19,7 +23,8 @@ export default {
   data() {
     return {
       dailyIntake: 3000,
-      date: '2019-09-16'
+      // date: new Date().toISOString().substr(0, 10) // TODO uncomment to add back in default today's date. Removed for testing.
+      date: '2019-09-17'
     };
   },
   computed: {
