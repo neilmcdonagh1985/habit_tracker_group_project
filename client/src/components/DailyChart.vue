@@ -5,9 +5,14 @@
 </template>
 
 <script>
+import VueApexCharts from 'vue-apexcharts';
+
 export default {
   name: 'daily-chart',
   props: ['todaysMeals'],
+  components: {
+    apexchart: VueApexCharts
+  },
   data() {
     return {
       dailyIntake: 3000, // TODO add this to the dataLabel.
