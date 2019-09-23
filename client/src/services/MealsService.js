@@ -10,5 +10,10 @@ export default {
   },
   getMeals() {
     return fetch(baseURL).then(res => res.json());
+  },
+  deleteMeal(id) {
+    return fetch(baseURL + id, {
+      method: 'DELETE'
+    }).then(res => res.json());
   }
 };

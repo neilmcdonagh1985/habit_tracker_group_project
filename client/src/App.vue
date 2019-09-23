@@ -34,7 +34,7 @@ export default {
   mounted() {
     this.showAllMeals();
 
-    eventBus.$on('new-meal-added', allMeals => {
+    eventBus.$on('meals-changed', allMeals => {
       this.meals = allMeals;
     });
   }
