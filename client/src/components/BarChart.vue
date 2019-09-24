@@ -22,7 +22,8 @@ export default {
       return this.meals.map(meal => meal.date).filter((v, i, a) => a.indexOf(v) ===i )
     },
     breakfastCalories: function () {
-      return this.meals.filter(meal => meal.type === "breakfast").map(meal => meal.calories)
+      return this.meals.filter(meal => meal.type === "breakfast")
+      .map(meal => meal.calories)
     },
     lunchCalories: function () {
       return this.meals.filter(meal => meal.type === "lunch").map(meal => meal.calories)
@@ -83,7 +84,7 @@ export default {
         tooltip: {
           y: {
             formatter: function (val) {
-              return "$ " + val + " thousands"
+              return "kcal " + val + " "
             }
           }
         }
