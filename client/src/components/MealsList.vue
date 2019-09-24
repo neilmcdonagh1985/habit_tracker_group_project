@@ -28,7 +28,7 @@ export default {
   },
   data() {
     return {
-      selectedDate: null
+      selectedDate: new Date().toISOString().substr(0, 10)
     }
   },
   methods: {
