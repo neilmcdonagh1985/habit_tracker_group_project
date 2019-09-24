@@ -1,9 +1,5 @@
 <template>
   <div>
-    <div>
-      <label for="date">Date:</label>
-      <input type="date" id="date" v-model="date" />
-    </div>
     <daily-chart :dailyCalories="dailyCalories" :dailyIntake="dailyIntake" />
     <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal" />
   </div>
