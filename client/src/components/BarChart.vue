@@ -17,9 +17,24 @@ export default {
   components: {
     apexchart: VueApexCharts
   },
-  data () {
-    return {
-      options: {
+  computed: {
+    uniqueDates: function() {
+      return this.meals.map(meal => meal.date).filter((v, i, a) => a.indexOf(v) ===i )
+    },
+    breakfastCalories: function () {
+      return this.meals.filter(meal => meal.type === "breakfast").map(meal => meal.calories)
+    },
+    lunchCalories: function () {
+      return this.meals.filter(meal => meal.type === "lunch").map(meal => meal.calories)
+    },
+    dinnerCalories: function () {
+      return this.meals.filter(meal => meal.type === "dinner").map(meal => meal.calories)
+    },
+    snackCalories: function () {
+      return this.meals.filter(meal => meal.type === "snack").map(meal => meal.calories)
+    },
+    options: function() {
+      return {
         chart: {
           height: 350,
           type: 'bar',
@@ -41,24 +56,24 @@ export default {
         },
         series: [{
           name: 'Breakfast',
-          data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+          data: this.breakfastCalories
         }, {
           name: 'Lunch',
-          data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+          data: this.lunchCalories
         }, {
           name: 'Dinner',
-          data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+          data: this.dinnerCalories
         },{
           name: 'Snack',
-          data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+          data: this.snackCalories
         }],
 
         xaxis: {
-          categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+          categories: this.uniqueDates,
         },
         yaxis: {
           title: {
-            text: '$ (thousands)'
+            text: 'kcal '
           }
         },
         fill: {
@@ -72,15 +87,11 @@ export default {
             }
           }
         }
-      },
-
-      // var chart = new ApexCharts(
-      //   document.querySelector("#chart"),
-      //   options
-      // );
-      //
-      // chart.render();
-
+      }
+    }
+  },
+  data () {
+    return {
     }
   }
 }
