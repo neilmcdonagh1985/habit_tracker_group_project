@@ -2,19 +2,23 @@
   <div>
     <daily-chart :dailyCalories="dailyCalories" :dailyIntake="dailyIntake" />
     <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal" />
+    <bar-chart :meals="meals"/>
   </div>
 </template>
 
 <script>
 import DailyChart from '@/components/DailyChart.vue';
 import DailyMeals from '@/components/DailyMeals.vue';
+import BarChart from '@/components/BarChart.vue';
+
 
 export default {
   name: 'meals-dashboard',
   props: ['meals'],
   components: {
     DailyChart,
-    DailyMeals
+    DailyMeals,
+    BarChart
   },
   data() {
     return {
