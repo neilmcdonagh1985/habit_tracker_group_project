@@ -37,10 +37,6 @@ export default {
       return graphArray
     },
     breakfastCalories: function () {
-<<<<<<< HEAD
-      return this.meals.filter(meal => meal.type === "breakfast")
-      .map(meal => meal.calories)
-=======
       let breakfastArray = this.meals.filter(meal => meal.type === "breakfast")
       let graphArray = []
        this.uniqueDates.forEach(function(date){
@@ -54,7 +50,6 @@ export default {
         }
        })
       return graphArray
->>>>>>> develop
     },
     lunchCalories: function () {
       let lunchArray = this.meals.filter(meal => meal.type === "lunch")
@@ -137,12 +132,7 @@ export default {
           y: {
             formatter: function (val) {
               return "kcal " + val + " "
-<<<<<<< HEAD
-            },
-            show: true
-=======
             }
->>>>>>> develop
           }
         }
       }

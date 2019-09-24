@@ -1,10 +1,6 @@
 <template lang="html">
   <div>
-<<<<<<< HEAD
     <apexchart id="chart" height="400" type="heatmap" :options="options" :series="options.series" />
-=======
-    <apexchart id="chart" height="400" type="bar" :options="options" :series="options.series" />
->>>>>>> develop
   </div>
 </template>
 
@@ -18,7 +14,6 @@ export default {
   props: ['meals'],
   components: {
     apexchart: VueApexCharts
-<<<<<<< HEAD
   },
   methods: {
     generateData: function (count, yrange) {
@@ -44,68 +39,66 @@ export default {
           height: 350,
           type: 'heatmap',
         },
+        plotOptions: {
+        heatmap: {
+          shadeIntensity: 0.5,
+
+          colorScale: {
+            ranges: [{
+                from: -30,
+                to: 5,
+                name: 'low',
+                color: '#00A100'
+              },
+              {
+                from: 6,
+                to: 20,
+                name: 'medium',
+                color: '#128FD9'
+              },
+              {
+                from: 21,
+                to: 45,
+                name: 'high',
+                color: '#FFB200'
+              },
+              {
+                from: 46,
+                to: 55,
+                name: 'extreme',
+                color: '#FF0000'
+              }
+            ]
+          }
+        }
+      },
         dataLabels: {
           enabled: false
         },
         colors: ["#008FFB"],
         series: [{
-          name: 'Metric1',
+          name: 'Breakfast',
           data: this.generateData(18, {
             min: 0,
             max: 90
           })
         },
         {
-          name: 'Metric2',
+          name: 'Lunch',
           data: this.generateData(18, {
             min: 0,
             max: 90
           })
         },
         {
-          name: 'Metric3',
+          name: 'Dinner',
           data: this.generateData(18, {
             min: 0,
             max: 90
           })
         },
         {
-          name: 'Metric4',
-          data: this.generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric5',
-          data: this.generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric6',
-          data: this.generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric7',
-          data: this.generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric8',
-          data: this.generateData(18, {
-            min: 0,
-            max: 90
-          })
-        },
-        {
-          name: 'Metric9',
+          name: 'Snack',
           data: this.generateData(18, {
             min: 0,
             max: 90
@@ -113,17 +106,13 @@ export default {
         }
       ],
       title: {
-        text: 'HeatMap Chart (Single color)'
+        text: 'HeatMap Calory Chart'
       }
     }
   }
 }
 }
 
-=======
-  }
-}
->>>>>>> develop
 </script>
 
 <style lang="css" scoped>
