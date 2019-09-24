@@ -21,17 +21,65 @@ export default {
     uniqueDates: function() {
       return this.meals.map(meal => meal.date).filter((v, i, a) => a.indexOf(v) ===i )
     },
+    snackCalories: function(){
+      let snackArray = this.meals.filter(meal => meal.type === "snack")
+      let graphArray = []
+       this.uniqueDates.forEach(function(date){
+        let foundMeal = snackArray.find(function(meal){
+         return meal.date === date 
+        }) 
+        if (foundMeal) {
+          graphArray.push(foundMeal.calories)
+        } else {
+          graphArray.push(0)
+        }
+       })
+      return graphArray
+    },
     breakfastCalories: function () {
-      return this.meals.filter(meal => meal.type === "breakfast").map(meal => meal.calories)
+      let breakfastArray = this.meals.filter(meal => meal.type === "breakfast")
+      let graphArray = []
+       this.uniqueDates.forEach(function(date){
+        let foundMeal = breakfastArray.find(function(meal){
+         return meal.date === date 
+        }) 
+        if (foundMeal) {
+          graphArray.push(foundMeal.calories)
+        } else {
+          graphArray.push(0)
+        }
+       })
+      return graphArray
     },
     lunchCalories: function () {
-      return this.meals.filter(meal => meal.type === "lunch").map(meal => meal.calories)
+      let lunchArray = this.meals.filter(meal => meal.type === "lunch")
+      let graphArray = []
+       this.uniqueDates.forEach(function(date){
+        let foundMeal = lunchArray.find(function(meal){
+         return meal.date === date 
+        }) 
+        if (foundMeal) {
+          graphArray.push(foundMeal.calories)
+        } else {
+          graphArray.push(0)
+        }
+       })
+      return graphArray
     },
     dinnerCalories: function () {
-      return this.meals.filter(meal => meal.type === "dinner").map(meal => meal.calories)
-    },
-    snackCalories: function () {
-      return this.meals.filter(meal => meal.type === "snack").map(meal => meal.calories)
+      let dinnerArray = this.meals.filter(meal => meal.type === "dinner")
+      let graphArray = []
+       this.uniqueDates.forEach(function(date){
+        let foundMeal = dinnerArray.find(function(meal){
+         return meal.date === date 
+        }) 
+        if (foundMeal) {
+          graphArray.push(foundMeal.calories)
+        } else {
+          graphArray.push(0)
+        }
+       })
+      return graphArray
     },
     options: function() {
       return {
@@ -83,7 +131,7 @@ export default {
         tooltip: {
           y: {
             formatter: function (val) {
-              return "$ " + val + " thousands"
+              return "kcal " + val + " "
             }
           }
         }
