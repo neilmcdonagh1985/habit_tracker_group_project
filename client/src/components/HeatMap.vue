@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <apexchart id="chart" height="400" type="heatmap" :options="options" :series="series" />
+    <apexchart id="chart" height="400" type="heatmap" :options="options" :series="options.series" />
   </div>
 </template>
 
@@ -15,51 +15,106 @@ export default {
   components: {
     apexchart: VueApexCharts
   },
-  computed: {
+  methods: {
     generateData: function (count, yrange) {
-            var i = 0;
-            var series = [];
-            while (i < count) {
-                var x = 'w' + (i + 1).toString();
-                var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+      let i = 0;
+      const series = [];
+      while (i < count) {
+        const x = 'w' + (i + 1).toString();
+        const y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
 
-                series.push({
-                    x: x,
-                    y: y
-                });
-                i++;
-            }
-            return series;
-        }
+        series.push({
+          x: x,
+          y: y
+        });
+        i++;
+      }
+      return series;
+    }
   },
-  options: {
-  plotOptions: {
-    heatmap: {
-      colorScale: {
-        ranges: [{
-            from: -30,
-            to: 5,
-            color: '#00A100',
-            name: 'low',
-          },
-          {
-            from: 6,
-            to: 20,
-            color: '#128FD9',
-            name: 'medium',
-          },
-          {
-            from: 21,
-            to: 45,
-            color: '#FFB200',
-            name: 'high',
-          }
-        ]
+  computed: {
+    options: function () {
+      return {
+        chart: {
+          height: 350,
+          type: 'heatmap',
+        },
+        dataLabels: {
+          enabled: false
+        },
+        colors: ["#008FFB"],
+        series: [{
+          name: 'Metric1',
+          data: this.generateData(18, {
+            min: 0,
+            max: 90
+          })
+        },
+        {
+          name: 'Metric2',
+          data: this.generateData(18, {
+            min: 0,
+            max: 90
+          })
+        },
+        {
+          name: 'Metric3',
+          data: this.generateData(18, {
+            min: 0,
+            max: 90
+          })
+        },
+        {
+          name: 'Metric4',
+          data: this.generateData(18, {
+            min: 0,
+            max: 90
+          })
+        },
+        {
+          name: 'Metric5',
+          data: this.generateData(18, {
+            min: 0,
+            max: 90
+          })
+        },
+        {
+          name: 'Metric6',
+          data: this.generateData(18, {
+            min: 0,
+            max: 90
+          })
+        },
+        {
+          name: 'Metric7',
+          data: this.generateData(18, {
+            min: 0,
+            max: 90
+          })
+        },
+        {
+          name: 'Metric8',
+          data: this.generateData(18, {
+            min: 0,
+            max: 90
+          })
+        },
+        {
+          name: 'Metric9',
+          data: this.generateData(18, {
+            min: 0,
+            max: 90
+          })
+        }
+      ],
+      title: {
+        text: 'HeatMap Chart (Single color)'
       }
     }
   }
 }
 }
+
 </script>
 
 <style lang="css" scoped>
