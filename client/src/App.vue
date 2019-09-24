@@ -57,6 +57,6 @@ export default {
   flex-direction: row;
 }
 #visual {
-  justify-content: center;
+  /* justify-content: center; */
 }
 </style>

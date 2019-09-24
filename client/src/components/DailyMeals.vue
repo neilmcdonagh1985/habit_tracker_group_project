@@ -1,6 +1,6 @@
 <template>
 
-    <h3>{{ formatMealText(meal.type) }} had {{ meal.calories }} kcl</h3>
+    <h3>{{ formatMealText(meal.type) }} {{ meal.calories }} kcal</h3>
 
 </template>
 
