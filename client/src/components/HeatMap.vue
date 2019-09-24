@@ -1,6 +1,10 @@
 <template lang="html">
   <div>
+<<<<<<< HEAD
     <apexchart id="chart" height="400" type="heatmap" :options="options" :series="options.series" />
+=======
+    <apexchart id="chart" height="400" type="bar" :options="options" :series="options.series" />
+>>>>>>> develop
   </div>
 </template>
 
@@ -14,6 +18,7 @@ export default {
   props: ['meals'],
   components: {
     apexchart: VueApexCharts
+<<<<<<< HEAD
   },
   methods: {
     generateData: function (count, yrange) {
@@ -115,6 +120,10 @@ export default {
 }
 }
 
+=======
+  }
+}
+>>>>>>> develop
 </script>
 
 <style lang="css" scoped>
