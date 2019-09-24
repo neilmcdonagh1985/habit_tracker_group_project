@@ -1,7 +1,9 @@
 <template>
   <div>
     <daily-chart :dailyCalories="dailyCalories" :dailyIntake="dailyIntake" />
-    <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal" />
+    <div class="daily-meals">
+      <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal"/>
+    </div>
     <bar-chart :meals="meals"/>
   </div>
 </template>
@@ -41,4 +43,10 @@ export default {
 </script>
 
 <style>
+.daily-meals {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 </style>

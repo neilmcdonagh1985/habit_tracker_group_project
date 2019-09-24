@@ -1,8 +1,7 @@
 <template>
-  <li>
-    <h3>{{ formatMealText(meal.type) }}</h3>
-    <p>{{ meal.calories }}</p>
-  </li>
+
+    <h3>{{ formatMealText(meal.type) }} had {{ meal.calories }} kcl</h3>
+
 </template>
 
 <script>
@@ -17,5 +16,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+
+
+
 </style>

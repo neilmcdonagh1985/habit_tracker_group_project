@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <nav id="nav">
     <form class="meal-form" v-on:submit.prevent="handleSubmit">
       <label for="date">Date:</label>
       <input type="date" id="date" v-model="date" />
@@ -18,7 +18,7 @@
 
       <input type="submit" />
     </form>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -50,4 +50,11 @@ export default {
 </script>
 
 <style scoped>
+.meal-form {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  float: left;
+  overflow: hidden;
+}
 </style>

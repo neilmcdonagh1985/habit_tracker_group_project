@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    <add-meal-form />
-    <meals-dashboard :meals="meals" />
-    <meals-list :meals="meals" />
+      <div id="nav-form">
+        <add-meal-form />
+      </div>
+      <div id="visual" >
+        <meals-dashboard :meals="meals" />
+        <meals-list :meals="meals" />
+      </div>
+
   </div>
 </template>
 
@@ -42,4 +47,16 @@ export default {
 </script>
 
 <style scoped>
+#nav-form {
+  position: fixed;
+  float: left;
+}
+
+#app {
+  display: flex;
+  flex-direction: row;
+}
+#visual {
+  justify-content: center;
+}
 </style>
