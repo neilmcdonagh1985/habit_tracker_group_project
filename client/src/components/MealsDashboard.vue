@@ -6,7 +6,7 @@
     </div>
     <daily-chart :dailyCalories="dailyCalories" :dailyIntake="dailyIntake" />
     <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal" />
-    <bar-chart />
+    <bar-chart :meals="meals"/>
   </div>
 </template>
 
