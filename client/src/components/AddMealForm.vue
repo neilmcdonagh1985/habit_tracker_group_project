@@ -29,7 +29,7 @@ export default {
   name: 'add-meal-form',
   data() {
     return {
-      date: null,
+      date: new Date().toISOString().substr(0, 10),
       type: null,
       calories: null
     };
