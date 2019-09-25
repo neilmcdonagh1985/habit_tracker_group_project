@@ -57,8 +57,5 @@ export default {
 </script>
 
 <style scoped>
-.daily-chart {
-
-}
 
 </style>

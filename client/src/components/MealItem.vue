@@ -38,7 +38,6 @@ td {
 }
 tr:hover {
   background-color: #f5f5f5;
-  /* justify-content: center; */
 }
 
 

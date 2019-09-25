@@ -1,7 +1,7 @@
 <template>
     <form class="meal-form" v-on:submit.prevent="handleSubmit">
       <br>
-      <img src="/calories.png" height="175px" alt="">
+      <img src="/calories.png" height="175px" alt="calories">
       <br>
       <div>
       <label for="date">Date</label>
@@ -55,7 +55,6 @@ export default {
 
 <style scoped>
 .meal-form {
-  /* float: none; */
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 255px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -66,16 +65,12 @@ export default {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
   padding: 6px 8px 6px 16px;
-  /* text-decoration: none; */
   font-size: 25px;
-  /* color: #818181; */
-  /* display: block */
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  
 }
 div {
   padding-bottom: 50px;
@@ -94,8 +89,5 @@ div {
   font-size: 18px;
   padding: 5px;
 }
-
-
-
 </style>
 
