@@ -22,7 +22,8 @@ export default {
     },
     dailyIntake: function() {
       let intakeArray = []
-      for (const date of this.uniqueDates) {
+    
+      for (let i = 0; i< this.uniqueDates.length; i++) {
         intakeArray.push(3000)
       }
       return intakeArray
@@ -59,12 +60,12 @@ export default {
           data: this.dailyConsumption
         },
         {
-          name: "Calory Target",
+          name: "Calorie Target",
           data: this.dailyIntake
         },
       ],
       title: {
-        text: 'Your Calory Trend',
+        text: 'Your Calorie Trend',
         align: 'centre'
       },
       legend: {

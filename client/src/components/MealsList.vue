@@ -2,12 +2,12 @@
   <div class="selected-meals-table">
     <div>
       <label for="selectedDate">Search Meals By Date:</label>
-      <input type="date" id="selectedDate" v-model="selectedDate" v-on:select="handleSelect" />
+      <input type="date" id="selectedDate" v-model="selectedDate"  />
     </div>
 
     <table>
-      <tr >
-        <meal-item v-for="meal in meals" v-if="meal.date === selectedDate" :key="meal._id" :meal="meal"/>
+      <tr v-for="meal in meals" :key="meal._id"  >
+        <meal-item  v-if="meal.date === selectedDate" :meal="meal" />
       </tr>
     </table>
 </div>
@@ -27,11 +27,7 @@ export default {
     }
   },
   methods: {
-    handleSelect(){
-      const newDate = {
-        selectedDate: this.selectedDate
-      }
-    }
+    
   }
 };
 </script>
@@ -48,7 +44,7 @@ th {
   text-align: center;
 }
 table {
-  background-color: blue;
+  background-color: white;
   text-align: center;
 }
 
