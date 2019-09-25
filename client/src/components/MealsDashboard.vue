@@ -7,7 +7,7 @@
     <daily-chart :dailyCalories="dailyCalories" :dailyIntake="dailyIntake" />
     <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal" />
     <bar-chart :meals="meals"/>
-    <heat-map :meal="meals"/>
+    <line-chart :meals="meals"/>
   </div>
 </template>
 
@@ -15,7 +15,7 @@
 import DailyChart from '@/components/DailyChart.vue';
 import DailyMeals from '@/components/DailyMeals.vue';
 import BarChart from '@/components/BarChart.vue';
-import HeatMap from '@/components/HeatMap.vue';
+import LineChart from '@/components/LineChart.vue';
 
 
 export default {
@@ -25,7 +25,7 @@ export default {
     DailyChart,
     DailyMeals,
     BarChart,
-    HeatMap
+    LineChart
   },
   data() {
     return {
