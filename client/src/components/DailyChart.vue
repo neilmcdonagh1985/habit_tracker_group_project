@@ -1,6 +1,6 @@
 <template>
   <div class="daily-chart">
-    <apexchart height="400" type="radialBar" :options="chartOptions" :series="formattedData" />
+    <apexchart height="550" type="radialBar" :options="chartOptions" :series="formattedData" />
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
         // TODO format the chart.
         labels: ['Kcal'],
         chart: {
-          height: 350,
+          height: 550,
           type: 'radialBar'
         },
         plotOptions: {
@@ -27,9 +27,11 @@ export default {
             dataLabels: {
               showOn: 'always',
               name: {
-                show: true
+                show: true,
+                fontSize: "36px"
               },
               value: {
+                fontSize: "26px",
                 formatter: () => {
                   return `${this.dailyCalories}/${this.dailyIntake}`;
                 },

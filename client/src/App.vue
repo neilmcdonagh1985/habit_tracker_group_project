@@ -1,13 +1,13 @@
 <template>
   <div id="app">
+    
       <div id="nav-form">
         <add-meal-form />
       </div>
       <div id="column-right" >
+        <h1 id="title-text">Count ME!</h1>
         <meals-dashboard :meals="meals" />
-      <div class="meals-list">
         <meals-list :meals="meals" />
-      </div>
       </div>
 
   </div>
@@ -53,18 +53,28 @@ export default {
   position: fixed;
   float: left;
   width: 25%;
+  overflow: hidden;
+  z-index: 1;
 }
 
-/* #app {
-  display: inline-flex; */
-  /* flex-direction: column; */
-/* } */
+#app {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 #column-right {
-  justify-content: right;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 250px;
+  justify-content: center;
+  width: 100%
 
 }
-/* .meals-list{
-  width: 100%;
-  float: right;
-} */
+#title-text {
+  font-size: 56px;
+}
+
+
 </style>

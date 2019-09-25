@@ -51,9 +51,6 @@ export default {
   flex-direction: row;
   justify-content: space-around;
 }
-.dashboard {
-  float: right;
-  width: 75%;
-}
+
 
 </style>
