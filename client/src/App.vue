@@ -3,9 +3,11 @@
       <div id="nav-form">
         <add-meal-form />
       </div>
-      <div id="visual" >
+      <div id="column-right" >
         <meals-dashboard :meals="meals" />
+      <div class="meals-list">
         <meals-list :meals="meals" />
+      </div>
       </div>
 
   </div>
@@ -50,13 +52,19 @@ export default {
 #nav-form {
   position: fixed;
   float: left;
+  width: 25%;
 }
 
-#app {
-  display: flex;
-  flex-direction: row;
+/* #app {
+  display: inline-flex; */
+  /* flex-direction: column; */
+/* } */
+#column-right {
+  justify-content: right;
+
 }
-#visual {
-  /* justify-content: center; */
-}
+/* .meals-list{
+  width: 100%;
+  float: right;
+} */
 </style>

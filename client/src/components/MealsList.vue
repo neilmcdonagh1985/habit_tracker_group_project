@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <div class="selected-meals-table">
     <div>
       <label for="selectedDate">Search Meals By Date:</label>
       <input type="date" id="selectedDate" v-model="selectedDate" v-on:select="handleSelect" />
     </div>
-    <table class="chosen-date-table">
+
+    <table>
       <tr >
         <meal-item v-for="meal in meals" v-if="meal.date === selectedDate" :key="meal._id" :meal="meal"/>
       </tr>
     </table>
-  </div>
+</div>
 </template>
 
 <script>
@@ -42,6 +43,13 @@ tr {
 }
 th {
   text-align: left;
+}
+.selected-meals-table {
+  text-align: center;
+}
+table {
+  background-color: blue;
+  text-align: center;
 }
 
 

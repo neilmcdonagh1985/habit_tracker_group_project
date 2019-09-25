@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="dashboard">
     <daily-chart :dailyCalories="dailyCalories" :dailyIntake="dailyIntake" />
     <div class="daily-meals">
       <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal"/>
@@ -47,6 +47,10 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.dashboard {
+  float: right;
+  width: 75%;
 }
 
 </style>
