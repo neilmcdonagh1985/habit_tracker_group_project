@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <td>{{ meal.date }}</td>
-    <td>{{ meal.type }}</td>
-    <td>{{ meal.calories }}</td>
-    <td>
-      <button @click="handleDelete()">DELETE</button>
-    </td>
-  </div>
+
+      <tr>
+        <td>{{ meal.date }}</td>
+        <td>{{ meal.type }}</td>
+        <td>{{ meal.calories }}</td>
+        <td>
+          <button v-on:click="handleDelete">DELETE</button>
+        </td>
+    </tr>
+
 </template>
 
 <script>
@@ -27,4 +29,16 @@ export default {
 };
 </script>
 
-<style scoped></style>
+
+
+<style scoped>
+td {
+   padding: 20px;
+   min-width: 150px;
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+
+</style>

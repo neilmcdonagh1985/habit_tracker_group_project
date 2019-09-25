@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <div>
-      <label for="date">Date:</label>
-      <input type="date" id="date" v-model="date" />
-    </div>
+  <div class="dashboard">
     <daily-chart :dailyCalories="dailyCalories" :dailyIntake="dailyIntake" />
-    <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal" />
+    <div class="daily-meals">
+      <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal"/>
+    </div>
+    <br><br>
     <bar-chart :meals="meals"/>
+    <line-chart :meals="meals"/>
   </div>
 </template>
 
@@ -14,6 +14,7 @@
 import DailyChart from '@/components/DailyChart.vue';
 import DailyMeals from '@/components/DailyMeals.vue';
 import BarChart from '@/components/BarChart.vue';
+import LineChart from '@/components/LineChart.vue';
 
 
 export default {
@@ -22,13 +23,13 @@ export default {
   components: {
     DailyChart,
     DailyMeals,
-    BarChart
+    BarChart,
+    LineChart
   },
   data() {
     return {
       dailyIntake: 3000,
-      // date: new Date().toISOString().substr(0, 10) // TODO uncomment to add back in default today's date. Removed for testing.
-      date: '2019-09-17'
+      date: new Date().toISOString().substr(0, 10)
     };
   },
   computed: {
@@ -45,4 +46,11 @@ export default {
 </script>
 
 <style>
+.daily-meals {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
 </style>
