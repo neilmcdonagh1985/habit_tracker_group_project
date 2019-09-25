@@ -1,7 +1,7 @@
 <template>
   <div class="selected-meals-table">
     <div>
-      <label for="selectedDate">Search Meals By Date:</label>
+      <label for="selectedDate"><h1>Search Meals By Date:</h1></label>
       <input type="date" id="selectedDate" v-model="selectedDate"  />
     </div>
 
@@ -35,7 +35,9 @@ export default {
 <style scoped>
 
 tr {
-  text-align: left;
+  text-align: center;
+  min-width: 550px;
+
 }
 th {
   text-align: left;
@@ -46,6 +48,22 @@ th {
 table {
   background-color: white;
   text-align: center;
+  justify-content: center;
+  margin: 0px auto;
+  
+}
+
+.selected-meals-table {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 18px;
+}
+#selectedDate {
+  border: 2px solid black;
+  font-size: 18px;
+  padding: 5px;
 }
 
 

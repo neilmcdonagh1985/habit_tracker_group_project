@@ -1,6 +1,7 @@
 <template>
   <div class="daily-chart">
     <apexchart height="550" type="radialBar" :options="chartOptions" :series="formattedData" />
+    <br><br>
   </div>
 </template>
 

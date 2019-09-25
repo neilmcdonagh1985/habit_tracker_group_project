@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    
       <div id="nav-form">
         <add-meal-form />
       </div>
@@ -9,7 +8,6 @@
         <meals-dashboard :meals="meals" />
         <meals-list :meals="meals" />
       </div>
-
   </div>
 </template>
 
@@ -18,7 +16,6 @@ import MealsService from './services/MealsService.js';
 import AddMealForm from './components/AddMealForm.vue';
 import MealsDashboard from './components/MealsDashboard.vue';
 import MealsList from '@/components/MealsList.vue';
-
 import { eventBus } from '@/main.js';
 
 export default {
@@ -52,7 +49,7 @@ export default {
 #nav-form {
   position: fixed;
   float: left;
-  width: 25%;
+  width: 100%;
   overflow: hidden;
   z-index: 1;
 }

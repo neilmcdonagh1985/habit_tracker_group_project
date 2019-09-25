@@ -1,6 +1,9 @@
-<template lang="html">
+<template>
   <div>
+    <h1>Calories Trend</h1>
     <apexchart id="chart" height="400" type="line" :options="options" :series="options.series" />
+    <hr>
+    <br><br>
   </div>
 </template>
 
@@ -65,7 +68,7 @@ export default {
         },
       ],
       title: {
-        text: 'Your Calorie Trend',
+        text: '',
         align: 'centre'
       },
       legend: {
