@@ -28,8 +28,8 @@ export default {
   data() {
     return {
       dailyIntake: 3000,
-      // date: new Date().toISOString().substr(0, 10) // TODO uncomment to add back in default today's date. Removed for testing.
-      date: '2019-09-17'
+      date: new Date().toISOString().substr(0, 10) // uncomment to add back in default today's date. Removed for testing.
+      // date: '2019-09-17'
     };
   },
   computed: {
