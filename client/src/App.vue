@@ -67,12 +67,14 @@ export default {
   text-align: center;
   padding-left: 280px;
   justify-content: center;
-  width: 100%
+  width: 100%;
+  z-index: 1;
+  box-sizing: border-box;
 
 }
 #title-text {
   font-size: 10vh;
-  margin-bottom: 4px;
+  margin-bottom: 4px; 
 }
 #tagline {
   font-size: 24px;
