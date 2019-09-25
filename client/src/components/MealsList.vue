@@ -66,6 +66,4 @@ table {
   padding: 5px;
 }
 
-
-
 </style>

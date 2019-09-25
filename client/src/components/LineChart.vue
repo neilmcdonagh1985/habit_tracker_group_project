@@ -11,7 +11,6 @@
 
 import VueApexCharts from 'vue-apexcharts';
 
-
 export default {
   name: "line-chart",
   props: ['meals'],
@@ -115,7 +114,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style lang="css" scoped>
