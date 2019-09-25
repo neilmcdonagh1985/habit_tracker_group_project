@@ -1,6 +1,9 @@
-<template lang="html">
+<template>
   <div>
+    <h1>Calories Trend</h1>
     <apexchart id="chart" height="400" type="line" :options="options" :series="options.series" />
+    <hr>
+    <br><br>
   </div>
 </template>
 
@@ -22,7 +25,8 @@ export default {
     },
     dailyIntake: function() {
       let intakeArray = []
-      for (const date of this.uniqueDates) {
+    
+      for (let i = 0; i< this.uniqueDates.length; i++) {
         intakeArray.push(3000)
       }
       return intakeArray
@@ -43,7 +47,7 @@ export default {
         height: 350,
         type: 'line',
         zoom: {
-          enabled: false
+          enabled: true
         },
       },
       dataLabels: {
@@ -59,12 +63,12 @@ export default {
           data: this.dailyConsumption
         },
         {
-          name: "Calory Target",
+          name: "Calorie Target",
           data: this.dailyIntake
         },
       ],
       title: {
-        text: 'Your Calory Trend',
+        text: '',
         align: 'centre'
       },
       legend: {
@@ -73,7 +77,7 @@ export default {
         }
       },
       markers: {
-        size: 0,
+        size: 4,
 
         hover: {
           sizeOffset: 6
@@ -86,13 +90,13 @@ export default {
         y: [{
           title: {
             formatter: function (val) {
-              return val + " (mins)"
+              return val + " (day)"
             }
           }
         }, {
           title: {
             formatter: function (val) {
-              return val + " per session"
+              return val + " per day"
             }
           }
         }, {

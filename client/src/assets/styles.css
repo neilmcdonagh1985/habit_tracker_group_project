@@ -1,6 +1,7 @@
 li {
   list-style-type: none;
 }
-h1 {
-  font-family: Arial, Helvetica, sans-serifs;
+body {
+  font-family: 'Righteous';
+  color: #008ffb;
 }

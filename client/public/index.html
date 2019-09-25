@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="./assets/loading.css">
+    <link rel="stylesheet" href="./asset/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
     <title>Count Me!</title>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but Count Me! doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"><h1 id="splash">Count Me! is loading.......</h1></div>
+    <div id="app"><div id="loading-wrapper">
+      <div id="loading-text">LOADING COUNT ME!</div>
+      <div id="loading-content"></div>
+    </div></div>
     <!-- built files will be auto injected -->
   </body>
 </html>

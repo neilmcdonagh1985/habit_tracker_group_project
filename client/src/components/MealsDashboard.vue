@@ -3,7 +3,9 @@
     <daily-chart :dailyCalories="dailyCalories" :dailyIntake="dailyIntake" />
     <div class="daily-meals">
       <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal"/>
+      
     </div>
+    <br><br>
     <bar-chart :meals="meals"/>
     <line-chart :meals="meals"/>
   </div>
@@ -51,9 +53,6 @@ export default {
   flex-direction: row;
   justify-content: space-around;
 }
-.dashboard {
-  float: right;
-  width: 75%;
-}
+
 
 </style>

@@ -5,7 +5,7 @@
         <td>{{ meal.type }}</td>
         <td>{{ meal.calories }}</td>
         <td>
-          <button @on:click="handleDelete()">DELETE</button>
+          <button v-on:click="handleDelete">DELETE</button>
         </td>
     </tr>
 
@@ -34,9 +34,11 @@ export default {
 <style scoped>
 td {
    padding: 20px;
+   min-width: 150px;
 }
 tr:hover {
   background-color: #f5f5f5;
+  /* justify-content: center; */
 }
 
 
