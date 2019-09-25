@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="daily-chart">
     <apexchart height="400" type="radialBar" :options="chartOptions" :series="formattedData" />
   </div>
 </template>
@@ -53,5 +53,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.daily-chart {
+
+}
+
 </style>

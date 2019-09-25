@@ -1,21 +1,16 @@
 <template>
-  <div>
+  <div class="selected-meals-table">
     <div>
-      <label for="selectedDate">Date:</label>
+      <label for="selectedDate">Search Meals By Date:</label>
       <input type="date" id="selectedDate" v-model="selectedDate" v-on:select="handleSelect" />
     </div>
+
     <table>
-      <tr>
-        <th>Date</th>
-        <th>Meal</th>
-        <th>Calories</th>
-        <th></th>
-      </tr>
-      <tr v-for="meal in meals" v-if="meal.date === selectedDate" :key="meal._id">
-        <meal-item :meal="meal" />
+      <tr >
+        <meal-item v-for="meal in meals" v-if="meal.date === selectedDate" :key="meal._id" :meal="meal"/>
       </tr>
     </table>
-  </div>
+</div>
 </template>
 
 <script>
@@ -41,4 +36,22 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+tr {
+  text-align: left;
+}
+th {
+  text-align: left;
+}
+.selected-meals-table {
+  text-align: center;
+}
+table {
+  background-color: blue;
+  text-align: center;
+}
+
+
+
+</style>

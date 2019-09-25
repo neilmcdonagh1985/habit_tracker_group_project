@@ -1,5 +1,4 @@
 <template>
-  <div>
     <form class="meal-form" v-on:submit.prevent="handleSubmit">
       <label for="date">Date:</label>
       <input type="date" id="date" v-model="date" />
@@ -18,7 +17,6 @@
 
       <input type="submit" />
     </form>
-  </div>
 </template>
 
 <script>
@@ -50,4 +48,30 @@ export default {
 </script>
 
 <style scoped>
+.meal-form {
+  float: none;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: lightblue;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  /* color: #818181; */
+  display: block
+}
+
+
 </style>
+
+<!-- .meal-form {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  /* float: left; */ -->
+  <!-- /* overflow: hidden; */ -->
