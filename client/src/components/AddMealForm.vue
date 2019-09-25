@@ -1,7 +1,7 @@
 <template>
     <form class="meal-form" v-on:submit.prevent="handleSubmit">
       <br>
-      <img src="/calories.png" height="175px" alt="">
+      <img src="/calories.png" height="175px" alt="calories">
       <br>
       <div>
       <label for="date">Date</label>
