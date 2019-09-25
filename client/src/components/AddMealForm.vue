@@ -1,5 +1,8 @@
 <template>
     <form class="meal-form" v-on:submit.prevent="handleSubmit">
+      <br>
+      <img src="/calories.png" height="175px" alt="">
+      <br>
       <div>
       <label for="date">Date</label>
       <input type="date" id="date" class="input-field" v-model="date" />

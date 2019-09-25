@@ -5,6 +5,7 @@
       </div>
       <div id="column-right" >
         <h1 id="title-text">Count ME!</h1>
+        <p id="tagline">track your calories</p>
         <meals-dashboard :meals="meals" />
         <meals-list :meals="meals" />
       </div>
@@ -64,13 +65,17 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-left: 250px;
+  padding-left: 280px;
   justify-content: center;
   width: 100%
 
 }
 #title-text {
-  font-size: 56px;
+  font-size: 10vh;
+  margin-bottom: 4px;
+}
+#tagline {
+  font-size: 24px;
 }
 
 

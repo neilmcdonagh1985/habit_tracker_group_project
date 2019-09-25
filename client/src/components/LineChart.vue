@@ -47,7 +47,7 @@ export default {
         height: 350,
         type: 'line',
         zoom: {
-          enabled: false
+          enabled: true
         },
       },
       dataLabels: {
@@ -77,7 +77,7 @@ export default {
         }
       },
       markers: {
-        size: 0,
+        size: 4,
 
         hover: {
           sizeOffset: 6
@@ -90,13 +90,13 @@ export default {
         y: [{
           title: {
             formatter: function (val) {
-              return val + " (mins)"
+              return val + " (day)"
             }
           }
         }, {
           title: {
             formatter: function (val) {
-              return val + " per session"
+              return val + " per day"
             }
           }
         }, {
