@@ -5,6 +5,7 @@
       <daily-meals v-for="meal in todaysMeals" :key="meal._id" :meal="meal"/>
     </div>
     <bar-chart :meals="meals"/>
+    <line-chart :meals="meals"/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import DailyChart from '@/components/DailyChart.vue';
 import DailyMeals from '@/components/DailyMeals.vue';
 import BarChart from '@/components/BarChart.vue';
+import LineChart from '@/components/LineChart.vue';
 
 
 export default {
@@ -20,13 +22,14 @@ export default {
   components: {
     DailyChart,
     DailyMeals,
-    BarChart
+    BarChart,
+    LineChart
   },
   data() {
     return {
       dailyIntake: 3000,
-      date: new Date().toISOString().substr(0, 10)
-      // date: '2019-09-17'
+      // date: new Date().toISOString().substr(0, 10) // TODO uncomment to add back in default today's date. Removed for testing.
+      date: '2019-09-17'
     };
   },
   computed: {
