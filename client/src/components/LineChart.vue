@@ -20,7 +20,7 @@ export default {
   
   computed: {
     uniqueDates: function() {
-      return this.meals.map(meal => meal.date).filter((v, i, a) => a.indexOf(v) ===i )
+      return this.meals.map(meal => meal.date).filter((date, index, datesArray) => datesArray.indexOf(date) === index )
     },
     dailyIntake: function() {
       let intakeArray = []
@@ -89,7 +89,7 @@ export default {
         y: [{
           title: {
             formatter: function (val) {
-              return val + " (day)"
+              return val 
             }
           }
         }, {

@@ -1,19 +1,16 @@
 <template>
-
       <tr>
         <td>{{ meal.date }}</td>
         <td>{{ meal.type }}</td>
-        <td>{{ meal.calories }}</td>
+        <td>{{ meal.calories }} Kcal </td>
         <td>
           <button v-on:click="handleDelete">DELETE</button>
         </td>
     </tr>
-
 </template>
 
 <script>
 import MealsService from '@/services/MealsService.js';
-
 import { eventBus } from '@/main.js';
 
 export default {

@@ -17,8 +17,7 @@ export default {
   data() {
     return {
       chartOptions: {
-        // TODO format the chart.
-        labels: ['Kcal'],
+        labels: ["Today's Kcal"],
         chart: {
           height: 550,
           type: 'radialBar'
