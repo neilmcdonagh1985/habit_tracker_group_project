@@ -4,7 +4,6 @@
       <label for="selectedDate"><h1>Search Meals By Date:</h1></label>
       <input type="date" id="selectedDate" v-model="selectedDate"  />
     </div>
-
     <table>
       <tr v-for="meal in meals" :key="meal._id"  >
         <meal-item  v-if="meal.date === selectedDate" :meal="meal" />
@@ -25,19 +24,14 @@ export default {
     return {
       selectedDate: new Date().toISOString().substr(0, 10)
     }
-  },
-  methods: {
-    
   }
 };
 </script>
 
 <style scoped>
-
 tr {
   text-align: center;
   min-width: 550px;
-
 }
 th {
   text-align: left;
@@ -50,9 +44,7 @@ table {
   text-align: center;
   justify-content: center;
   margin: 0px auto;
-  
 }
-
 .selected-meals-table {
   display: flex;
   justify-content: center;
@@ -65,5 +57,4 @@ table {
   font-size: 18px;
   padding: 5px;
 }
-
 </style>

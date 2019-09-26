@@ -48,6 +48,8 @@ export default {
       MealsService.addMeal(newMeal).then(res => {
         eventBus.$emit('meals-changed', res);
       });
+      this.type = " ",
+      this.calories = ""
     }
   }
 };
@@ -55,14 +57,14 @@ export default {
 
 <style scoped>
 .meal-form {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 255px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%; 
+  width: 255px; 
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
   left: 0;
   background-color: #008ffb;
-  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-x: hidden;
   padding-top: 20px;
   padding: 6px 8px 6px 16px;
   font-size: 25px;

@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     uniqueDates: function() {
-      const allDates = this.meals.map(meal => meal.date).filter((v, i, a) => a.indexOf(v) ===i )
+      const allDates = this.meals.map(meal => meal.date).filter((date, index, datesArray) => datesArray.indexOf(date) ===index )
       if (allDates.length <= 7) {
         return allDates
       } else {
@@ -31,65 +31,65 @@ export default {
         return allDates.splice(numberOfDatesToRemove)
       }
     },
-    snackCalories: function(){
+    snackCalories: function() {
       let snackArray = this.meals.filter(meal => meal.type === "snack")
-      let graphArray = []
-       this.uniqueDates.forEach(function(date){
-        let foundMeal = snackArray.find(function(meal){
-         return meal.date === date 
-        }) 
-        if (foundMeal) {
-          graphArray.push(foundMeal.calories)
+      let orderedSnacksValues = []
+      this.uniqueDates.forEach(function(date){
+        let foundMeals = snackArray.filter(meal => meal.date === date)
+        if (foundMeals.length === 0) {
+          orderedSnacksValues.push(0)
         } else {
-          graphArray.push(0)
+          let valueForSpecificDate = foundMeals.map(meal => meal.calories)
+            .reduce((totalcalories,calories) => totalcalories + calories ,0);
+          orderedSnacksValues.push(valueForSpecificDate)
         }
-       })
-      return graphArray
+      })
+      return orderedSnacksValues
     },
-    breakfastCalories: function () {
+      breakfastCalories: function () {
       let breakfastArray = this.meals.filter(meal => meal.type === "breakfast")
-      let graphArray = []
+      let orderedBreakfastValues = []
        this.uniqueDates.forEach(function(date){
-        let foundMeal = breakfastArray.find(function(meal){
-         return meal.date === date 
-        }) 
-        if (foundMeal) {
-          graphArray.push(foundMeal.calories)
+        let foundMeals = breakfastArray.filter(meal => meal.date === date)
+        if (foundMeals.length === 0) {
+          orderedBreakfastValues.push(0)
         } else {
-          graphArray.push(0)
+          let valueForSpecificDate = foundMeals.map(meal => meal.calories)
+            .reduce((totalcalories,calories) => totalcalories + calories ,0);
+          orderedBreakfastValues.push(valueForSpecificDate)
         }
        })
-      return graphArray
+      return orderedBreakfastValues
     },
     lunchCalories: function () {
       let lunchArray = this.meals.filter(meal => meal.type === "lunch")
-      let graphArray = []
+      let orderedLunchValues = []
        this.uniqueDates.forEach(function(date){
-        let foundMeal = lunchArray.find(function(meal){
-         return meal.date === date 
-        }) 
-        if (foundMeal) {
-          graphArray.push(foundMeal.calories)
+       let foundMeals = lunchArray.filter(meal => meal.date === date)
+        if (foundMeals.length === 0) {
+          orderedLunchValues.push(0)
         } else {
-          graphArray.push(0)
+          let valueForSpecificDate = foundMeals.map(meal => meal.calories)
+            .reduce((totalcalories,calories) => totalcalories + calories ,0);
+          orderedLunchValues.push(valueForSpecificDate)
         }
        })
-      return graphArray
+      return orderedLunchValues
     },
     dinnerCalories: function () {
       let dinnerArray = this.meals.filter(meal => meal.type === "dinner")
-      let graphArray = []
+      let orderedDinnerValues = []
        this.uniqueDates.forEach(function(date){
-        let foundMeal = dinnerArray.find(function(meal){
-         return meal.date === date 
-        }) 
-        if (foundMeal) {
-          graphArray.push(foundMeal.calories)
+        let foundMeals = dinnerArray.filter(meal => meal.date === date)
+        if (foundMeals.length === 0) {
+          orderedDinnerValues.push(0)
         } else {
-          graphArray.push(0)
+          let valueForSpecificDate = foundMeals.map(meal => meal.calories)
+            .reduce((totalcalories,calories) => totalcalories + calories ,0);
+          orderedDinnerValues.push(valueForSpecificDate)
         }
        })
-      return graphArray
+      return orderedDinnerValues
     },
     options: function() {
       return {
