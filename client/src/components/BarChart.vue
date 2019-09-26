@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     uniqueDates: function() {
-      const allDates = this.meals.map(meal => meal.date).filter((v, i, a) => a.indexOf(v) ===i )
+      const allDates = this.meals.map(meal => meal.date).filter((date, index, datesArray) => datesArray.indexOf(date) ===index )
       if (allDates.length <= 7) {
         return allDates
       } else {

@@ -51,6 +51,4 @@ export default {
   flex-direction: row;
   justify-content: space-around;
 }
-
-
 </style>
