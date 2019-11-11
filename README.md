@@ -24,4 +24,8 @@ Below is the barchart used for the weekly display:
 
 <img width="874" alt="Screenshot 2019-11-11 at 11 28 33" src="https://user-images.githubusercontent.com/51781302/68584131-ab9bfc00-0476-11ea-9a32-4fd81db50367.png">
 
+The below images show the user's view of their long-term trajectory along with the search by date function.
+
+<img width="866" alt="Screenshot 2019-11-11 at 11 33 16" src="https://user-images.githubusercontent.com/51781302/68584329-2ebd5200-0477-11ea-9cd8-e3bb11f4cc32.png">
+
 
