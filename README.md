@@ -19,5 +19,6 @@ Bring in an API for users to select their food so they would not have to manuall
 
 Provide a 'fun facts' function which when daily meals are entered, facts are displayed about recommended daily intake in relation to the user's personal stats.
 <img width="832" alt="Screenshot 2019-11-11 at 11 17 55" src="https://user-images.githubusercontent.com/51781302/68583589-7511b180-0475-11ea-9fcf-93cd4991615d.png">
+<img width="1094" alt="Screenshot 2019-11-11 at 11 24 27" src="https://user-images.githubusercontent.com/51781302/68583764-ecdfdc00-0475-11ea-9b10-95a14124eb83.png">
 
 
