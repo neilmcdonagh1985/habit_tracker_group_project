@@ -18,3 +18,4 @@ Things to Improve:
 Bring in an API for users to select their food so they would not have to manually insert the amount of calories per meal.
 
 Provide a 'fun facts' function which when daily meals are entered, facts are displayed about recommended daily intake in relation to the user's personal stats.
+
