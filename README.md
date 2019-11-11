@@ -32,6 +32,16 @@ The below images show the user's view of their long-term trajectory along with t
 
 run npm install in client and server folders
 
+## To Run ##
+
+mongod
+npm run serve
+npm run server:dev
+
+
+
+
+
 
 
 
