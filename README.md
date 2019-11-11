@@ -28,6 +28,10 @@ The below images show the user's view of their long-term trajectory along with t
 
 <img width="866" alt="Screenshot 2019-11-11 at 11 33 16" src="https://user-images.githubusercontent.com/51781302/68584329-2ebd5200-0477-11ea-9cd8-e3bb11f4cc32.png">
 
+## To Install ##
+
+run npm install in client and server folders
+
 
 
 
