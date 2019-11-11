@@ -35,7 +35,9 @@ run npm install in client and server folders
 ## To Run ##
 
 mongod
+
 npm run serve
+
 npm run server:dev
 
 
