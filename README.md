@@ -20,4 +20,8 @@ Bring in an API for users to select their food so they would not have to manuall
 Provide a 'fun facts' function which when daily meals are entered, facts are displayed about recommended daily intake in relation to the user's personal stats.
 <img width="832" alt="Screenshot 2019-11-11 at 11 17 55" src="https://user-images.githubusercontent.com/51781302/68583589-7511b180-0475-11ea-9fcf-93cd4991615d.png">
 
+Below is the barchart used for the weekly display:
+
+<img width="874" alt="Screenshot 2019-11-11 at 11 28 33" src="https://user-images.githubusercontent.com/51781302/68584131-ab9bfc00-0476-11ea-9a32-4fd81db50367.png">
+
 
